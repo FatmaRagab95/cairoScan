@@ -1,0 +1,570 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General_Forms</title>
+	<link rel="stylesheet" href="../layout/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../layout/css/hover.css"/>
+    <link rel="stylesheet" href="../layout/css/style-redEN.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../layout/css/style-red.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../layout/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../layout/css/bootstrap-material-datetimepicker.css">
+	<link rel="stylesheet" href="../layout/css/material-icons.css">
+	<link rel="stylesheet" href="../layout/css/nice-select.css">
+	<link rel="stylesheet" href="../layout/css/MaterialDesignIcons.css">
+	<link rel="stylesheet" href="../layout/css/perfect-scrollbar.css">
+		<link rel="stylesheet" href="../layout/css/util.css">
+    <link rel="stylesheet" href="../layout/css/main.css">
+	<script src="../layout/js/jQuery 3.2.1.js"></script>
+	<script src="../layout/js/jQuery-UI.js"></script>
+	<script src="../layout/js/vue.js"></script>
+	<script src="../layout/js/moment.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server" action='test.aspx'>
+    <div class="page-container">
+		<!-- =========================== HEADER ==========================-->
+    <div class="first-naav">
+        <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+                   <div class="working-bars">
+                      <ul class="main-links">
+						  <li><a href="#"><span><i class="fa fa-home ico"></i></span>Home</a></li>
+					     <li><a href="#"><span><i class="fa fa-envelope-open" aria-hidden="true"></i></span>Email</a></li>
+					     <li><a href="#"><span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>Registration</a></li>
+					     <li><a href="#"><span><i class="fa fa-lock" aria-hidden="true"></i></span>Login</a></li>
+				      </ul>
+                   </div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="mainbar gradient diagonal">
+            <div class="container">
+                <div class="logo"><a href="https://www.cairoscan.com.eg/" class="brand"><img src="https://www.cairoscan.com.eg/assets/images/logo.png" alt="logo"></a></div>
+                <div class="menu_container">
+                    <!-- ========================= NAVIGATION MENU ========================-->
+					<div class="row">
+						<div class="col-md-6">
+					<div class="profile">
+						<div class="img-con">
+							<img src="../layout/img/avatar.png">
+						</div>
+						<div class="info">
+							<h3>Welcome</h3>
+							<h2>Ahmed Ali</h2>
+							<h3>Front End</h3>
+						</div>
+						
+						</div>
+					  </div>
+				<div class="col-md-6">	
+                    <nav>
+						
+						<!--start new dropdown-->
+						<div class="dropdown g-menu">
+						  <a class="dash dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							  <i class='fa fa-bars'></i>
+						  </a>
+						<ul class="dropdown-menu submenu" aria-labelledby="dropdownMenuLink1">
+							<li class="dropdown-item" ><a href="..\external_pages\index.html" class="link">
+								<span class="icon"><i class="fa fa-home con"></i></span>
+								<span class="link-text">Dashboard</span></a>
+							</li>
+							<li class="dropdown-item" >
+                                <a href='javascript:void();' class=" dropdown-toggle" data-toggle="dropdown" id='f1'>
+									<span class="icon"><i class="fa fa-check-square-o con"></i></span>
+									<span class="link-text">Daily Tasks</span>                                   
+									<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu other-drop" aria-labelledby="f1">
+                                    <li class="dropdown-item" ><a class="item" href="../DailyTasks/todo.html">To Do List</a></li>
+                                </ul>
+                            </li>
+							<li class="dropdown-item" >
+                                <a href="javascript:void();" class="dropdown-toggle" data-toggle="dropdown" id='f1' role="button" aria-haspopup="true" aria-expanded="false">
+									 <span class="icon"><i class="fa fa-hospital-o con"></i></span>
+									<span class="link-text">Drugs</span>
+									<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu other-drop" aria-labelledby="f2">
+                                    <li class="dropdown-item "><a class="item" href="../Drugs/Search.aspx">Search</a></li>
+                                </ul>
+                            </li>
+							<li class=" dropdown-item">
+                                <a href="javascript:void();" class="dropdown-toggle" id='f2' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="icon"><i class="fa fa-sign-out con"></i></span>
+									<span class="link-text">Discharge</span>                                
+									<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu other-drop"  aria-labelledby="f1">
+                                    <li class="dropdown-item"><a class="item" href="../Discharge/discharge.html">Lorem</a></li>
+                                </ul>
+                            </li>
+							<li class=" dropdown-item">
+                                <a href="javascript:void();" class="dropdown-toggle" id='f3' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									<span class="icon"><i class="fa fa-copy con"></i></span>
+									<span class="link-text">General Forms</span>                                    
+									<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu other-drop" aria-labelledby="f3">
+                                    <li class="dropdown-item"><a class="item" href="../General_Forms/Departments_Cats.aspx">Departments</a></li>
+                                </ul>
+                            </li>
+							<li class="dropdown-item">
+                                <a href="javascript:void();" class="dropdown-toggle" id='f4' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									<span class="icon"><i class="fa fa-shield con"></i></span>
+									<span class="link-text">OPD</span>                                   
+									<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu other-drop" aria-labelledby="f4">
+                                    <li class="dropdown-item"><a class="item" href="../OPD/custom.html">Lorem</a></li>
+                                </ul>
+                            </li>
+							<li class=" dropdown-item">
+                                <a href="javascript:void();" class="dropdown-toggle" id='f5' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									<span class="icon"><i class="fa fa-shield con"></i></span>
+									<span class="link-text">OR</span>                                
+									<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu other-drop" aria-labelledby="f5">
+                                    <li class="dropdown-item"><a class="item" href="../OR/custom.html">Lorem</a></li>
+                                </ul>
+                            </li>
+							<li class="dropdown-item">
+                                <a href="javascript:void();" class="dropdown-toggle" id='f6' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									<span class="icon"><i class="fa fa-heartbeat con"></i></span>
+									<span class="link-text">Policies</span>                                  
+									<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu other-drop" aria-labelledby="f6">
+                                    <li class="dropdown-item"><a class="item" href="../Policies/custom.html">Policies</a></li>
+                                </ul>
+                            </li>
+							<li class="dropdown-item">
+                                <a href="javascript:void();" class="dropdown-toggle" id='f7' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									<span class="icon"><i class="fa fa-shield con"></i></span>
+									<span class="link-text">Security</span>                                   
+									<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu other-drop appear" aria-labelledby="f7">
+                                    <li class="dropdown-item "><a class="item" href="../Security/AdminUsers.aspx">Users</a></li>
+                                    <li class="dropdown-item "><a class="item" href="../Security/User_Previlidges.aspx">previlidges</a></li>
+									 <li class="dropdown-item"><a class="item" href="../Security/ChangePassword.aspx">change password</a></li>
+
+                                </ul>
+                            </li>
+							<li class="dropdown-item">
+                                <a href="javascript:void();" class="dropdown-toggle" id='f7' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									<span class="icon"><i class="fa fa-graduation-cap"></i></span>
+									<span class="link-text">Survey</span>                                   
+									<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu other-drop appear" aria-labelledby="f7">
+                                    <li class="dropdown-item ">
+									  <a class="item" href="../Survey/OutSurvey_Branches.aspx">Branches</a>
+									</li>
+                                    <li class="dropdown-item ">
+									   <a class="item" a href="../Survey/SurOrCus.aspx">Choose Servey</a>
+									   </li>
+									<li class="dropdown-item">
+									  <a class="item" href="../Survey/OutSurvey_PatientsList.aspx">user</a>
+									  </li>
+
+                                </ul>
+                            </li>
+							<li class="dropdown-item">
+                                <a href="javascript:void();" class="dropdown-toggle" id='f8' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                     <span class="icon"><i class="fa fa-graduation-cap con"></i></span>
+									<span class="link-text">Training</span>                                    
+									<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu other-drop" aria-labelledby="f8">
+                                    <li class="dropdown-item"><a class="item" href="../Training/Admin_AddEditDelete_User.html">Admin Screen</a></li>
+									<li class="dropdown-item">
+							            <a class="item" href="../Training/fir-page.aspx"> 
+								         E-Learning
+							            </a>
+						            </li>
+                                </ul>
+                            </li>
+								   
+								   
+							</ul> 
+						</div>
+						<!--end new dropdown-->
+						
+						
+                    </nav>
+				</div>
+					
+						</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- END======================== HEADER ==========================-->
+       <!-- <div class="sideBar">
+		    <i class="fa fa-times close-btn hidden"></i>
+            <div class="app-logo text-center">
+                <img class="img-fluid" alt="logo" src="../layout/img/logo.png"></div>
+            <div class="profile">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="img">
+                                <img class="rounded-circle" src="../layout/img/person.jpg"></div>
+                        </div>
+                        <div class="col-8">
+                            <div class="info">
+                                <span>Welcome,</span>
+                                <h2>Rabaa</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-unstyled">
+                <li>
+					<a href="../external_pages/index.html">
+						<i class="fa fa-home"></i>
+						<span class="link-text">Dashboard</span></a>
+				</li>
+                <li class="main-menu">
+					<a>
+						<i class="fa fa-check-square-o"></i>
+						<span class="link-text">Daily Tasks</span>
+						<span class="icon fa fa-chevron-down pull-right"></span>
+					</a>
+                    <ul class="list-unstyled sub-menu">
+                        <li><a href="../DailyTasks/todo.html"><span class="link-text">To Do List</span></a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+					<a>
+						<i class="fa fa-hospital-o"></i>
+						<span class="link-text">Drugs</span>
+						<span class="icon fa fa-chevron-down pull-right"></span>
+					</a>
+                    <ul class="list-unstyled sub-menu">
+                        <li><a href="../Drugs/Search.aspx"><span class="link-text">Search</span></a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+					<a>
+						<i class="fa fa-sign-out"></i>
+						<span class="link-text">Discharge</span>
+						<span class="icon fa fa-chevron-down pull-right"></span>
+					</a>
+                    <ul class="list-unstyled sub-menu">
+                        <li><a href="../Discharge/discharge.html"><span class="link-text">Lorem</span></a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+					<a>
+						<i class="fa fa-copy"></i>
+						<span class="link-text">General Forms</span>
+						<span class="icon fa fa-chevron-down pull-right"></span>
+					</a>
+                    <ul class="list-unstyled sub-menu">
+                        <li>
+							<a href="../General_Forms/Departments_Cats.aspx">
+								<span class="link-text">Departments</span>
+							</a>
+						</li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+					<a>
+						<i class="fa fa-shield"></i>
+						<span class="link-text">OPD</span>
+						<span class="icon fa fa-chevron-down pull-right"></span>
+					</a>
+                    <ul class="list-unstyled sub-menu">
+                        <li>
+							<a href="../OPD/custom.html">
+								<span class="link-text">Lorem</span>
+							</a>
+						</li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+					<a>
+						<i class="fa fa-shield"></i>
+						<span class="link-text">OR</span>
+						<span class="icon fa fa-chevron-down pull-right"></span>
+					</a>
+                    <ul class="list-unstyled sub-menu">
+                        <li>
+							<a href="../OR/custom.html">
+								<span class="link-text">Lorem</span>
+							</a>
+						</li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+					<a>
+						<i class="fa fa-heartbeat"></i>
+						<span class="link-text">Policies</span>
+						<span class="icon fa fa-chevron-down pull-right"></span>
+					</a>
+                    <ul class="list-unstyled sub-menu">
+                        <li>
+							<a href="../Policies/custom.html">
+								<span class="link-text">Policies</span>
+							</a>
+						</li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+					<a>
+						<i class="fa fa-shield"></i>
+						<span class="link-text">Security</span>
+						<span class="icon fa fa-chevron-down pull-right"></span>
+					</a>
+                    <ul class="list-unstyled sub-menu">
+                        <li><a href="../Security/AdminUsers.aspx"><span class="link-text">Users</span></a></li>
+                        <li><a href='../Security/User_Previlidges.aspx'><span class="link-text">previlidges</span></a></li>
+                        <li><a href='../Security/ChangePassword.aspx'><span class="link-text">change password</span></a></li>
+                    </ul>
+                </li>
+				<li class="main-menu">
+					<a>
+						<i class="fa fa-graduation-cap"></i>
+						<span class="link-text">Survey</span>
+						<span class="icon fa fa-chevron-down pull-right"></span>
+					</a>
+                    <ul class="list-unstyled sub-menu">
+                        <li>
+							<a href="../Survey/OutSurvey_Branches.aspx">
+								<span class="link-text">branches</span>
+							</a>
+						</li>
+						<li>
+							<a href="../Survey/SurOrCus.aspx"> 
+								<span class="link-text">Choose Servey </span>
+							</a>
+						</li>
+						<li>
+							<a href="../Survey/UserDefault.aspx"> 
+								<span class="link-text">user </span>
+							</a>
+						</li>
+						
+                    </ul>
+                </li>
+                <li class="main-menu">
+					<a>
+						<i class="fa fa-graduation-cap"></i>
+						<span class="link-text">Training</span>
+						<span class="icon fa fa-chevron-down pull-right"></span>
+					</a>
+                    <ul class="list-unstyled sub-menu">
+                        <li>
+							<a href="../Training/Admin_AddEditDelete_User.html">
+								<span class="link-text">Admin Screen</span>
+							</a>
+						</li>
+						<li>
+							<a href="../Training/fir-page.aspx"> 
+								<span class="link-text">E-Learning</span>
+							</a>
+						</li>
+                    </ul>
+                </li>
+				
+            </ul>
+        </div>
+        <div class="main-contnet">
+            <header class="topbar">
+                <i class="toggleBar fa fa-exchange"></i>
+                <ul class="list-unstyled menu pull-right align-items-center">
+                    <li class="main-menu"><i class="fa fa-bell-o"></i><span class="num">4</span>
+                        <ul class="list-unstyled sub-menu">
+                            <li><a class="notfi" href="#">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <div class="info">
+                                            <span class="time">3 min ago</span>
+                                            <h3>Fatma Ragab</h3>
+                                            <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a class="notfi" href="#">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <div class="info">
+                                            <span class="time">3 min ago</span>
+                                            <h3>Fatma Ragab</h3>
+                                            <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a class="notfi" href="#">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <div class="info">
+                                            <span class="time">3 min ago</span>
+                                            <h3>Fatma Ragab</h3>
+                                            <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li class="text-center"><a class="msg" href="#">View All</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu"><i class="fa fa-envelope-o"></i><span class="num">13</span>
+                        <ul class="list-unstyled sub-menu">
+                            <li><a class="msg" href="#">
+                                <div class="row align-items-center">
+                                    <div class="col-3">
+                                        <img class="rounded-circle img-fluid" src="../layout/img/person.jpg"></div>
+                                    <div class="col-9">
+                                        <div class="info">
+                                            <span class="time">3 min ago</span>
+                                            <h3>Fatma Ragab</h3>
+                                            <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a class="msg" href="#">
+                                <div class="row align-items-center">
+                                    <div class="col-3">
+                                        <img class="rounded-circle img-fluid" src="../layout/img/person.jpg"></div>
+                                    <div class="col-9">
+                                        <div class="info">
+                                            <span class="time">3 min ago</span>
+                                            <h3>Fatma Ragab</h3>
+                                            <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a class="msg" href="#">
+                                <div class="row align-items-center">
+                                    <div class="col-3">
+                                        <img class="rounded-circle img-fluid" src="../layout/img/person.jpg"></div>
+                                    <div class="col-9">
+                                        <div class="info">
+                                            <span class="time">3 min ago</span>
+                                            <h3>Fatma Ragab</h3>
+                                            <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li class="text-center"><a class="msg" href="#">View All</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <div class="row align-items-center">
+                            <div class="col-5 profile">
+                                <img class="rounded-circle img-fluid" src="../layout/img/person.jpg"></div>
+                            <div class="col-7 profile p-0"><span>Rabaa Ali</span></div>
+                        </div>
+                        <ul class="list-unstyled sub-menu profile-menu">
+                            <li><a href="#"><i class="fa fa-user-circle"></i><span>Profile</span></a></li>
+                            <li><a href="#"><i class="fa fa-gear"></i><span>Settings</span></a></li>
+                            <li><a href="#"><i class="fa fa-sign-out"></i><span>Log Out</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </header>
+            <div class="breed">
+                <ul class="list-unstyled">
+                    <li><a href="../index.html">Home /</a></li>
+                    <li><a href="#">General_Forms</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div> -->
+            <!-- start General Forms page-->
+            <div class="internal-page">
+				<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+			<!-- ============================ FOOTER ============================-->
+    <footer class="gradient-invert diagonal-70-invert vbottom">
+        <div class="container">
+            <div class="row">
+                <!-- ========================== WIDGET ABOUT US ==========================-->
+                <div class="col-sm-12" id="FooterSocial">
+                    <div class="widget pl_about_us_widget">
+                        <div class="container">
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <p class="contact_detail">
+                                        <i class="fa fa-phone"></i><span>19144</span>
+                                    </p>
+                                    <p class="contact_detail">
+                                        <a href="intent://send/01272203258#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">
+                                            <i class="fa fa-whatsapp"></i><span>01272203258
+                                        </span>
+                                        </a>
+                                    </p>
+                                   
+                                </div>
+                                <div class="col-md-6">
+                                     <p class="contact_detail">
+                                        <i class="fa fa-envelope"></i><span><a href="mailto:Radreport@cairoscan.com.eg">Radreport@cairoscan.com.eg</a></span>
+                                    </p>
+
+                                    <p class="social">
+                                        <a href="https://www.facebook.com/CairoScanRadiologyLabs/?fref=ts">
+                                            <i class="fa fa-facebook-f"></i><span>Fb.com/CairoScanRadiologyLabs</span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END======================= WIDGET ABOUT US ==========================-->
+            </div>
+        </div>
+    </footer>
+    <!-- END========================== FOOTER ============================-->
+    <div class="copyright secondary_section">
+        <div class="secondary_section transparent-film">
+            <div class="container">
+                <div class="text-center">Copyright ©2020 all rights reserved</div>
+            </div>
+        </div>
+    </div><a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+	  
+	
+			</div>
+        </form>
+      <script src="../layout/js/sweetalert.min.js"></script>
+		<script src="../layout/js/slick.min.js"></script>
+		<script src="../layout/js/jquery.slimscroll.min.js"></script>
+		<script src="../layout/js/popper.min.js"></script>
+		<script src="../layout/js/bootstrap-material-datetimepicker.js"></script>
+		<script src="../layout/js/jquery-nice-select.js"></script>
+		<script src="../layout/js/bootstrap.min.js"></script>
+		<script src='../layout/js/jquery-ui.multidatespicker.js'></script>
+		<script src="../layout/js/chart.js"></script>
+		<script src="../layout/js/Chart.min.js"></script>
+		<script src="../layout/js/vue-chartjs.min.js"></script>
+		<script src="../layout/js/utils.js"></script>
+		<script src="../layout/js/jquery.steps.js"></script>
+		<script src="../layout/js/analytics.js"></script>
+		<script src="../layout/js/deferred.js"></script>
+        <script src='../layout/vue-code/app_general.js'></script>
+		<script src="../layout/js/moment.js"></script>
+		<script src="../layout/js/youtube-iframe-api.js"></script>
+			<script src="../layout/js/perfect-scrollbar.min.js"></script>
+		<script src="../layout/js/main.js"></script>
+   
+</body>
+</html>

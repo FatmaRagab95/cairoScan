@@ -1,0 +1,105 @@
+﻿@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+}
+/**:not(.fa) {
+    font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !important
+*/
+html {
+    background-color: #fffbfb;
+}
+body {
+    background-color:transparent;
+}
+h1,h2 {
+    margin:40px auto;
+}
+@media (max-width:767px) {
+    a#searchBtn {
+        transform: translate(-50px, -50%);
+    }
+}
+body.sticky_header .header {
+    border-bottom:1px solid #eee;
+}
+.boxed {border:none}
+.first-naav .container > div > p i, .first-naav .container > div > a i {
+    margin:0 10px;
+}
+.search-overlay-container .container {
+    background: none !important;
+}
+#return-to-top {
+    direction:ltr;
+}
+
+.gradient-invert {
+    background: -webkit-linear-gradient(-45deg, #1e1e1e 30%,#AE1E23 30%);
+    background: linear-gradient(-45deg, #1e1e1e 30%,#AE1E23 30%);
+    width: 100%;
+    color:#fff;
+}
+
+.pl_about_us_widget p i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 5px;
+    background-color: transparent;
+}
+
+/*results*/
+.results .result {
+	display:table-cell;
+	white-space: nowrap;
+	padding:0 5px;
+	width: 70px;
+	min-width: 70px;
+	text-align: center;
+}
+.results .result.result-text {
+	width:100%;
+	border: 1px solid #ececec;
+	padding: 4px 12px;
+	border-radius:3px;
+}
+.results .result-widget {
+	max-width:100%;
+}
+.results .result-widget .labels {
+	flex-wrap:wrap;
+	justify-content: flex-start;
+}
+.results .result-widget .labels div {
+	margin-bottom:10px;
+	flex-basis:20%;
+}
+@media (max-width:991px) {
+	.results .result-widget .labels div {
+	  flex-basis:50%
+	}
+}
+.results .result-widget .labels .result {
+	display:inline-block
+}
+.results .result-widget .result {
+	font-size:16px;
+	vertical-align: middle;
+}
+@media (min-width:768px) {
+	.results .result-group .result {
+		display:block;    
+		background-color: #ececec;
+		padding: 4px;
+		border-radius: 3px;
+		margin:auto;
+	}
+}
+.results .result.up,.result-tip .tip-box .tip.up {
+	color:#259b2a;
+}
+.results .result.down,.result-tip .tip-box .tip.down {
+	color:#f00;
+}

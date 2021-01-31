@@ -1,0 +1,351 @@
+<template>
+  <div class="login">
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <div id="form-header">
+          <img class="img-fluid" src="../assets/layout/img/logo.png" alt="logo" />
+        </div>
+        <h2>Sign In</h2>
+        <!-- Login Form -->
+        <form @submit.prevent="login()">
+          <input
+            name="username"
+            type="text"
+            id="username"
+            class="fadeIn second"
+            placeholder="User name"
+            v-model="user.user_name"
+          />
+          <input
+            name="password"
+            type="password"
+            id="password"
+            class="fadeIn third"
+            placeholder="Password"
+            v-model="user.pass_word"
+          />
+          <input
+            type="submit"
+            name="Button_Submit"
+            value="Submit"
+            id="Button_Submit"
+            class="fadeIn fourth"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "login",
+  data() {
+    return {
+      user: {
+        user_name: "",
+        pass_word: "",
+      },
+      apiUrl: "http://localhost:62477/endoresment/dist/",
+    };
+  },
+  methods: {
+    login() {
+      let that = this;
+      if (that.user.user_name && that.user.pass_word) {
+        $.ajax({
+          type: "POST",
+          url: that.apiUrl + "loginApi.aspx/login",
+          data: JSON.stringify({ user: that.user }),
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          success: function (result) {
+            if (result.d == "false") {
+              swal({
+                title: "Error!",
+                text: "The username or password is not correct!",
+                icon: "warning",
+                dangerMode: true,
+              });
+            } else {
+              let data = JSON.parse(result.d)[0];
+              localStorage.setItem("user", JSON.stringify(data));
+              that.$router.push({ name: "home" });
+            }
+          },
+        });
+      }
+    },
+  },
+};
+</script>
+
+<style scoped>
+@font-face {
+  font-family: "PTSansNarrow";
+  src: url("../assets/layout/fonts/PTSansNarrow-Regular.ttf") format("truetype");
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+}
+body {
+  font-family: "PTSansNarrow";
+  font-size: 18px;
+  background-color: #f0f0f0;
+}
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* start login */
+.login {
+  height: 100vh;
+  background-size: cover;
+  background-color: #fff;
+}
+
+.login h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  display: inline-block;
+  margin: 15px 8px;
+  color: #cccccc;
+}
+
+/* STRUCTURE */
+
+.login .wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.login #formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.login #form-header {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.login #form-header img {
+  max-width: 250px;
+}
+
+/* TABS */
+
+.login h2 {
+  color: #0d0d0d;
+  border-bottom: 2px solid #046132;
+}
+
+/* FORM TYPOGRAPHY*/
+
+.login input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.special-btn {
+  background-color: #1ca963;
+  border: none;
+  color: white;
+  padding: 10px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 16px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+  box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.login input[type="button"]:hover,
+input[type="submit"]:hover,
+.login input[type="reset"]:hover,
+.special-btn:hover {
+  background-color: #046132;
+  color: #fff;
+}
+
+.login input[type="button"]:active,
+input[type="submit"]:active,
+.login input[type="reset"]:active,
+.special-btn:active {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.login input[type="text"]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+.login input[type="text"]:placeholder {
+  color: #cccccc;
+}
+
+.login input[type="button"],
+input[type="submit"],
+.special-btn {
+  margin-top: 30px;
+}
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* border-radius animation */
+@keyframes morphing {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after {
+  width: 100%;
+}
+</style>
