@@ -1,12 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import login from '@/components/login'
-import home from '@/components/home'
+import home from '@/components/Home'
 
-import addUnit from '@/components/endoresment/addUnit'
-import Units from '@/components/endoresment/Units'
-import addPatient from '@/components/endoresment/add_patient'
-import viewPatients from '@/components/endoresment/viewPatients'
+
+import Create_Training from '@/components/TrainingPages/Create_Training'
 
 Vue.use(Router)
 
@@ -22,49 +20,22 @@ const router = new Router({
     },    
     {
       path:'/',
-      name:'Dashboard',
+      name:'Home',
       component:home,
       meta: {
         requiresAuth:true,
-        cat:'Endoresment'
+        cat:'Training'
       }
     },
     {
-        path: '/add_Unit',
-        name: 'Add Units Details',
-        component: addUnit,
+        path: '/Create_Training',
+        name: 'New Lecture',
+        component: Create_Training,
         meta: {
           requiresAuth:true,
-          cat:'Endoresment'
+          cat:'Training'
         }
     },
-    {
-        path: '/Units',
-        name: 'Units',
-        component: Units,
-        meta: {
-          requiresAuth:true,
-          cat:'Endoresment'
-        }
-    },
-    {
-        path: '/addmition',
-        name: 'Addmition Form',
-        component: addPatient,
-        meta: {
-          requiresAuth:true,
-          cat:'Endoresment'
-        }
-    },
-    {
-        path: '/viewPatients',
-        name: 'Patients',
-        component: viewPatients,
-        meta: {
-          requiresAuth:true,
-          cat:'Endoresment'
-        }
-    }
   ]
 });
 

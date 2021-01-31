@@ -1,83 +1,4 @@
-﻿
-/*!
-Theme Name: Medicus - HEALTH-X
-Theme URI: http://plethorathemes.com/html/medicus/
-Description: Medical HTML Template based on twitter bootstrap.
-Version: 1.1.0
-Author: Plethora Themes
-Author URI: http://www.plethorathemes.com
-*/
-
-
-/*
-    TABLE OF CONTENTS
-=================================================================
-
-    0. =BOOTSTRAP FRAMEWORK REFERENCE IMPORTS
-
-    1. =THEME MIXINS GENERAL HELPER STYLES & CLASSES
-
-    2. =BUTTONS
-
-    3. =BODY & TYPOGRAPHY
-
-    4. =THE HEADER, LOGO & PRIMARY MENU
-
-    5. =THE HEAD PANEL AREA
-
-    6. =THE MAIN AREA & THE ROOT SECTION ELEMENT
-
-    7. =DESIGN ELEMENTS
-
-    8. =BLOG PAGE
-
-    9. =SIDEBAR & WIDGETS
-
-    10. =FOOTER WIDGETIZED AREA
-
-    11. =BOOTSTRAP ELEMENTS OVERRIDES
-
-    12. =MISC STYLES
-
-    13. =RESPONSIVE STATES
-
-=================================================================
-*/
-
-
-/*
-=================================================================
-
-
-0. =BOOTSTRAP FRAMEWORK REFERENCE IMPORTS
-
-In "style.less" we reference some of Bootstrap's .less files in order to take advantage of their classes and mixins.
-We also reference the "theme_variables.less" in order to override the original variables and make our custom theme.
-A customized "theme_custom_bootstrap.css" is also loaded by the theme in a precompiled minified css version.
-=================================================================
-*/
-
-
-/*!
- ______ _____   _______ _______ _______ _______ ______ _______
-|   __ \     |_|    ___|_     _|   |   |       |   __ \   _   |
-|    __/       |    ___| |   | |       |   -   |      <       |
-|___|  |_______|_______| |___| |___|___|_______|___|__|___|___|
-
-P L E T H O R A T H E M E S . C O M                    (c) 2015
-
-Theme Name: Medicus
-THEME STYLES v.1.0.0
-===============================================================
-*/
-
-
-/*
-1. =THEME MIXINS GENERAL HELPER STYLES & CLASSES
-===============================================================
-*/
-
-.background_cover {
+﻿.background_cover {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1702,14 +1623,12 @@ a.social_links_2 {
         display: block;
         -webkit-transform: translate(0, -50%);
         transform: translate(0, -50%);
-        background: url(../images/slider-arrows.png) 0 0 no-repeat;
         margin: 0;
         opacity: .3;
     }
 
         .head_panel .owl-carousel .owl-prev:hover, .head_panel .owl-carousel .owl-next:hover {
             opacity: 1;
-            background: url(../images/slider-arrows.png) 0 0 no-repeat transparent;
         }
 
     .head_panel .owl-carousel .owl-prev {
@@ -3271,7 +3190,6 @@ table.timetable_big {
 
         .twitter_feed_wrapper .flexslider ul.flex-direction-nav a {
             opacity: 1;
-            background: url('../images/luna-controls-twitter.png') no-repeat -55px 0;
             background-size: 80px;
             border: 1px solid white;
             height: 40px;
@@ -4594,52 +4512,6 @@ i.fa.danger {
     }
 
 
-/* OWL SLIDER ADDITIONS */
-
-ul.owl-carousel {
-    list-style: none;
-}
-
-
-/* =DEMOs Page
--------------------------------------------------------------- */
-
-.demo_item {
-    background-image: url('../images/demos_page/monitor.png');
-    padding-bottom: 81.09% !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@media (max-width: 991px) {
-    .demo_item {
-        margin-bottom: 55px !important;
-    }
-}
-
-.demo_item .stretchy-wrapper {
-    width: auto !important;
-    padding-bottom: 52% !important;
-    height: inherit;
-    margin: 5% 4%;
-    background-position: center top;
-    -webkit-transition: all 2000ms ease-in-out;
-    transition: all 2000ms ease-in-out;
-    -webkit-overflow-scrolling: touch;
-}
-
-    .demo_item .stretchy-wrapper:hover {
-        background-position: center bottom;
-        -webkit-transition: all 2000ms ease-in-out;
-        transition: all 2000ms ease-in-out;
-        -webkit-overflow-scrolling: touch;
-    }
-
-
 /*
 13. =RESPONSIVE STATES
 ===============================================================
@@ -5376,13 +5248,6 @@ ul.owl-carousel {
 
 #LocationSearch select {
     width: 100%;
-}
-
-@font-face {
-    font-family: 'GE_SS_Two_Light';
-    src: url('fonts/GE_SS_Two_Light/fonts/GE_SS_Two_Light.eot');
-    font-weight: normal;
-    font-style: normal;
 }
 
 #LangButton {
